@@ -7,41 +7,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-//public class HelloApplication extends Application {
-//    @Override
-//    public void start(Stage stage) throws IOException {
-//        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/quiz/quizera/login-view.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load(), 400, 500);
-//        stage.setTitle("Quizera - Login");
-//        stage.setScene(scene);
-//        stage.show();
-//    }
-//}
-
-
-
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.Parent;
-import javafx.stage.Stage;
-
-import java.io.IOException;
-
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
     FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/quiz/quizera/login-view.fxml"));
-        Parent root = fxmlLoader.load();
-        // Create scene without fixed width/height so it sizes dynamically with content
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(fxmlLoader.load(), 700, 700);
         stage.setTitle("Quizera - Login");
         stage.setScene(scene);
-        // Set sensible minimums, allow user to resize; initial size comes from layout
-        stage.setMinWidth(360);
-        stage.setMinHeight(480);
-        stage.sizeToScene();
-        stage.setResizable(true);
         stage.show();
     }
 }

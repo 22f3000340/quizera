@@ -22,7 +22,7 @@
 
             <VBox spacing="20" alignment="CENTER">
                 <Button text="View Profile" onAction="#handleViewProfile" maxWidth="300" prefHeight="50" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 16px;"/>
-                <Button text="View Courses" onAction="#handleViewCourses" maxWidth="300" prefHeight="50" style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-font-size: 16px;"/>
+                <Button text="Start Quiz" onAction="#handleViewCourses" maxWidth="300" prefHeight="50" style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-font-size: 16px;"/>
                 <Button text="View Grades" onAction="#handleViewGrades" maxWidth="300" prefHeight="50" style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-size: 16px;"/>
                 <Button text="Attempt History" onAction="#handleViewHistory" maxWidth="300" prefHeight="50" style="-fx-background-color: #16a085; -fx-text-fill: white; -fx-font-size: 16px;"/>
             </VBox>

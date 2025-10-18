@@ -31,10 +31,12 @@
 
             <HBox spacing="15" alignment="CENTER">
                 <Button text="Refresh Users" onAction="#loadUsers" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;"/>
-                <Button text="Add User" onAction="#handleAddUser" style="-fx-background-color: #8e44ad; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;"/>
-                <Button text="Edit User" onAction="#handleEditUser" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;"/>
+                <Button text="Add User" onAction="#handleAddUser" style="-fx-background-color: #1abc9c; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;"/>
+                <Button text="Edit User" onAction="#handleEditUser" style="-fx-background-color: #16a085; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;"/>
                 <Button text="Delete User" onAction="#handleDeleteUser" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;"/>
-                <Button text="Manage Quizzes" onAction="#handleManageQuizzes" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;"/>
+                <Button text="Manage Quizzes" onAction="#handleManageQuizzes" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;"/>
+                <Button text="View Attempts" onAction="#handleViewAttempts" style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;"/>
+                <Button text="Toggle Role" onAction="#handleToggleRole" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;"/>
             </HBox>
         </VBox>
     </center>
