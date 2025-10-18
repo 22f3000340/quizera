@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quiz.quizera.controllers.ScoreController">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+    </padding>
+    <Label text="Quiz Completed" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <Label fx:id="scoreLabel" style="-fx-font-size: 18px;"/>
+    <HBox spacing="10">
+        <Button text="Back to Selection" onAction="#handleBack"/>
+        <Button fx:id="reviewButton" text="Review Answers" onAction="#handleReview"/>
+    </HBox>
+</VBox>

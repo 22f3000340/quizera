@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quiz.quizera.controllers.QuizController">
+    <top>
+        <HBox spacing="20" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label fx:id="headerLabel" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Label fx:id="timerLabel" style="-fx-text-fill: #f1c40f; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <Label fx:id="questionLabel" wrapText="true" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <RadioButton fx:id="optionA"/>
+            <RadioButton fx:id="optionB"/>
+            <RadioButton fx:id="optionC"/>
+            <RadioButton fx:id="optionD"/>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT" style="-fx-padding: 10;">
+            <Button text="Previous" onAction="#handlePrev"/>
+            <Button text="Next" onAction="#handleNext"/>
+            <Button text="Submit" onAction="#handleSubmit" style="-fx-background-color: #27ae60; -fx-text-fill: white;"/>
+        </HBox>
+    </bottom>
+</BorderPane>

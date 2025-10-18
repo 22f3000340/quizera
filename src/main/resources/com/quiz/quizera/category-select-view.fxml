@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.quiz.quizera.controllers.CategorySelectController" style="-fx-background-color: #ecf0f1;">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+    </padding>
+    <Label text="Choose Category &amp; Difficulty" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <HBox spacing="10">
+        <Label text="Category:"/>
+        <ComboBox fx:id="categoryCombo" prefWidth="200"/>
+        <Label text="Difficulty:"/>
+        <ComboBox fx:id="difficultyCombo" prefWidth="150"/>
+    </HBox>
+    <Label fx:id="messageLabel" style="-fx-text-fill: #e74c3c;"/>
+    <HBox spacing="10">
+        <Button text="Back" onAction="#handleBack"/>
+        <Button text="Start Quiz" onAction="#handleStartQuiz" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;"/>
+    </HBox>
+</VBox>

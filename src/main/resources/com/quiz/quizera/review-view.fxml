@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quiz.quizera.controllers.ReviewController">
+    <top>
+        <Label text="Review Answers" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 10;"/>
+    </top>
+    <center>
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn fx:id="colQuestion" text="Question" prefWidth="500"/>
+                <TableColumn fx:id="colSelected" text="Your Answer" prefWidth="120"/>
+                <TableColumn fx:id="colCorrect" text="Correct Answer" prefWidth="140"/>
+                <TableColumn fx:id="colIsCorrect" text="Correct?" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

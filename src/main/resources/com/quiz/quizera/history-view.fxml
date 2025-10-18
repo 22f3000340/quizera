@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quiz.quizera.controllers.HistoryController">
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <Label text="Attempt History" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Button text="Back" onAction="#handleBack"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <TableView fx:id="table" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colCategory" text="Category" prefWidth="150"/>
+                    <TableColumn fx:id="colDifficulty" text="Difficulty" prefWidth="120"/>
+                    <TableColumn fx:id="colScore" text="Score" prefWidth="100"/>
+                    <TableColumn fx:id="colStarted" text="Started At" prefWidth="200"/>
+                    <TableColumn fx:id="colCompleted" text="Completed At" prefWidth="200"/>
+                </columns>
+            </TableView>
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="Review Selected" onAction="#handleReviewSelected"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

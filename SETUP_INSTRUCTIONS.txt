@@ -1,0 +1,247 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║                  🎓 QUIZERA - JavaFX Quiz Application                ║
+║                          Setup Instructions                           ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+✅ PROJECT STATUS: READY TO RUN
+
+═══════════════════════════════════════════════════════════════════════
+
+📦 WHAT'S INCLUDED:
+
+✓ Complete JavaFX Application with FXML views
+✓ MySQL Database Integration (JDBC)
+✓ Login & Registration System
+✓ Admin Dashboard (User Management)
+✓ Student Dashboard
+✓ Pre-configured Test Users
+✓ Automated Setup Scripts
+✓ Comprehensive Documentation
+
+═══════════════════════════════════════════════════════════════════════
+
+🚀 QUICK START (3 Commands):
+
+1. Setup Database:
+   ./setup-database.sh
+   
+2. Run Application:
+   ./mvnw clean javafx:run
+   
+3. Login with test credentials:
+   Admin:   username=admin    password=admin123
+   Student: username=student  password=student123
+
+═══════════════════════════════════════════════════════════════════════
+
+📋 DETAILED SETUP:
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ STEP 1: Verify Prerequisites                                         │
+└─────────────────────────────────────────────────────────────────────┘
+
+Required:
+• Java 17 or higher
+• Maven 3.6+
+• MySQL 8.0+
+
+Check your versions:
+  java -version
+  mvn -version
+  mysql --version
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ STEP 2: Setup MySQL Database                                         │
+└─────────────────────────────────────────────────────────────────────┘
+
+Option A - Automated (Linux/Mac):
+  chmod +x setup-database.sh
+  ./setup-database.sh
+
+Option B - Manual:
+  mysql -u root -p < src/main/resources/database/setup.sql
+
+Option C - MySQL Workbench:
+  Open: src/main/resources/database/setup.sql
+  Execute all statements
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ STEP 3: Configure Database Connection (if needed)                    │
+└─────────────────────────────────────────────────────────────────────┘
+
+If your MySQL username/password is different from "root"/"root":
+
+Edit: src/main/java/com/quiz/quizera/utils/DatabaseConnection.java
+
+Change these lines:
+  private static final String USER = "root";      // Your MySQL username
+  private static final String PASSWORD = "root";  // Your MySQL password
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ STEP 4: Build and Run                                                │
+└─────────────────────────────────────────────────────────────────────┘
+
+Linux/Mac:
+  ./mvnw clean javafx:run
+
+Windows:
+  mvnw.cmd clean javafx:run
+
+═══════════════════════════════════════════════════════════════════════
+
+🔑 TEST CREDENTIALS:
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ ADMIN ACCOUNTS                                                        │
+├──────────────────────────────────────────────────────────────────────┤
+│ Username: admin          Password: admin123                          │
+│ Username: admin2         Password: admin123                          │
+└──────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ STUDENT ACCOUNTS                                                      │
+├──────────────────────────────────────────────────────────────────────┤
+│ Username: student        Password: student123                        │
+│ Username: john_doe       Password: password123                       │
+│ Username: jane_smith     Password: password123                       │
+└──────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════
+
+📱 APPLICATION FEATURES:
+
+🔐 LOGIN SCREEN
+   • Beautiful gradient UI
+   • Username/Password authentication
+   • Link to registration
+   • Test credentials displayed
+
+📝 REGISTRATION SCREEN  
+   • Create new account
+   • Email validation
+   • Password confirmation
+   • Role selection (Student/Admin)
+
+👨‍💼 ADMIN DASHBOARD
+   • View all users in table
+   • Delete users
+   • Refresh user list
+   • Professional UI with dark theme
+
+👨‍🎓 STUDENT DASHBOARD
+   • View Profile (placeholder)
+   • View Courses (placeholder)
+   • View Grades (placeholder)
+   • Modern card-style layout
+
+═══════════════════════════════════════════════════════════════════════
+
+🗄️ DATABASE STRUCTURE:
+
+Database: quizera
+Table: users
+┌──────────────┬─────────────────┬─────────────────────────────────┐
+│ Column       │ Type            │ Description                     │
+├──────────────┼─────────────────┼─────────────────────────────────┤
+│ id           │ INT PK AUTO_INC │ Unique user ID                  │
+│ username     │ VARCHAR(50)     │ Unique username                 │
+│ email        │ VARCHAR(100)    │ Unique email address            │
+│ password     │ VARCHAR(255)    │ User password (plain text*)     │
+│ role         │ ENUM            │ STUDENT or ADMIN                │
+│ created_at   │ TIMESTAMP       │ Account creation time           │
+└──────────────┴─────────────────┴─────────────────────────────────┘
+
+* Note: Passwords are stored in plain text for development only.
+  For production, implement BCrypt or similar hashing!
+
+═══════════════════════════════════════════════════════════════════════
+
+📚 DOCUMENTATION FILES:
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ SETUP_INSTRUCTIONS.txt  ← You are here                               │
+│ QUICKSTART.md          Quick 3-step setup guide                      │
+│ README.md              Complete documentation                        │
+│ PROJECT_SUMMARY.md     Project overview and features                 │
+│ APPLICATION_FLOW.md    Visual flow diagrams                          │
+└──────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════
+
+🛠️ TROUBLESHOOTING:
+
+Problem: "Connection refused" error
+Solution: Check if MySQL is running
+  sudo systemctl status mysql
+  sudo systemctl start mysql
+
+Problem: "Access denied for user" error
+Solution: Verify MySQL credentials in DatabaseConnection.java
+
+Problem: Maven build errors
+Solution: Clean and rebuild
+  ./mvnw clean install
+  rm -rf target/
+  ./mvnw clean compile
+
+Problem: JavaFX errors
+Solution: Ensure Java 17+ is installed and JAVA_HOME is set correctly
+
+Problem: Module errors
+Solution: Check that module-info.java includes:
+  requires java.sql;
+  opens com.quiz.quizera.controllers to javafx.fxml;
+
+═══════════════════════════════════════════════════════════════════════
+
+🎯 DEVELOPMENT ROADMAP:
+
+High Priority:
+□ Implement password hashing (BCrypt)
+□ Add input validation
+□ Implement error logging
+
+Future Features:
+□ Quiz creation and management
+□ Question bank system
+□ Student quiz attempts
+□ Automatic grading
+□ Grade reports
+□ Email notifications
+□ Password reset
+□ Profile pictures
+
+═══════════════════════════════════════════════════════════════════════
+
+💡 TIPS & BEST PRACTICES:
+
+• Always use the automated setup script for easiest installation
+• Test with provided credentials before creating new accounts
+• Keep database credentials secure
+• Regular database backups recommended
+• Use connection pooling for production
+• Implement proper logging system
+• Add unit tests for controllers
+
+═══════════════════════════════════════════════════════════════════════
+
+📞 GETTING HELP:
+
+If you encounter issues:
+1. Check the troubleshooting section above
+2. Review README.md for detailed documentation
+3. Check APPLICATION_FLOW.md to understand the system
+4. Verify all prerequisites are installed correctly
+
+═══════════════════════════════════════════════════════════════════════
+
+✨ YOU'RE ALL SET!
+
+Your Quizera application is ready to run. Follow the Quick Start
+instructions above to get started in minutes.
+
+Happy coding! 🎓
+
+═══════════════════════════════════════════════════════════════════════
